@@ -162,10 +162,10 @@ function cacheFunction(cb) {
 
 	return function (single_argument) {
 		if (hasProperty(cache, single_argument)) {
-				return cache[single_argument];
+			return cache[single_argument];
 		} else {
-				cache[single_argument] = cb(single_argument);
-				return cache[single_argument];
+			cache[single_argument] = cb(single_argument);
+			return cache[single_argument];
 		}
 	};
 }
