@@ -12,9 +12,15 @@
 		- Closure refers to the scope of variables. Within a function, Callbacks can access global variables and variables of the enclosing function, but variables cannot be access from outside the enclosing function.
 		- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 	* arguments array
+		- an array of arguments passed in to a function e.g. function(a, b, c, d, etc...)
 	* recursion
+		- a function which calls itself until a base case condition is satisfied.
 	* prototype
+		- a single explicit method made implicitly available to all objects in an array
+		- as compared to explicitly articulating the same method within each object within an array of objects.
+		- D.R.Y.
 	* constructors
+		- templates
 
 
 2. Fork and clone this repo.  When you need to commit use the following commands.
