@@ -5,7 +5,12 @@
 1. Feynman Writing Prompts - Write out explanations of the following concepts like you are explaining it to a 12 year old.  Doing this will help you quickly discover any holes in your understanding.  Ask your questions on Slack.
 
 	* Callback Functions
+		- Passing a function as an argument
+		- Callback functions are called by other functions:
+		- http://recurial.com/programming/understanding-callback-functions-in-javascript/
 	* Closure
+		- Closure refers to the scope of variables. Within a function, Callbacks can access global variables and variables of the enclosing function, but variables cannot be access from outside the enclosing function.
+		- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 	* arguments array
 	* recursion
 	* prototype
