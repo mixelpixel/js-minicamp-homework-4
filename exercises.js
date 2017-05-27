@@ -127,6 +127,13 @@ function nFactorial(n) {
 	//example:
 	//the factorial of 3 is 6 (3 * 2 * 1)
 
+	// if (n === 1) {return n;}
+	// return n * nFactorial(n - 1);
+
+	if (n === 1) return n;
+	return n * nFactorial(n - 1);
+
+
 }
 
 function cacheFunction(cb) {
@@ -141,6 +148,32 @@ function cacheFunction(cb) {
 	//if the function you return is invoked with 5 it would pass 5 to cb(5) and return 25
 	//if the function you return is invoked again with 5 it will look on an object in the closure scope
 	//and return 25 directly and will not invoke cb again
+
+	var cache = {};
+
+	// function hasProperty(object, property) {
+	// 	//return true if the object has the value of the property argument
+	// 	//property is a string
+	// 	//otherwise return false
+	// 	if (object[property]) {
+	// 		return true;
+	// 	} else return false;
+	// }
+
+	return function (single_argument) {
+		// if (hasProperty(cache, single_argument)) {
+		//   return true;
+		// } else return false;
+
+		// http://es5.github.io/#x15.2.4.5
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+		if (cache.hasOwnProperty(single_argument)) {
+				return cache[single_argument];
+		} else {
+				cache[single_argument] = cb(single_argument);
+				return cache[single_argument];
+		}
+	};
 }
 
 
