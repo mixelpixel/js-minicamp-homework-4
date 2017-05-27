@@ -151,17 +151,23 @@ function cacheFunction(cb) {
 
 	var cache = {};
 
-	function hasProperty(object, property) {
-		//return true if the object has the value of the property argument
-		//property is a string
-		//otherwise return false
-		if (object[property]) {
-			return true;
-		} else return false;
-	}
+	// function hasProperty(object, property) {
+	// 	//return true if the object has the value of the property argument
+	// 	//property is a string
+	// 	//otherwise return false
+	// 	if (object[property]) {
+	// 		return true;
+	// 	} else return false;
+	// }
 
 	return function (single_argument) {
-		if (hasProperty(cache, single_argument)) {
+		// if (hasProperty(cache, single_argument)) {
+		// 	return true;
+		// } else return false;
+
+		// http://es5.github.io/#x15.2.4.5
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+		if (cache.hasOwnProperty(single_argument)) {
 			return cache[single_argument];
 		} else {
 			cache[single_argument] = cb(single_argument);
