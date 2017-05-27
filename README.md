@@ -21,6 +21,7 @@
 		- D.R.Y.
 	* constructors
 		- templates
+	- DONE!
 
 
 2. Fork and clone this repo.  When you need to commit use the following commands.
@@ -33,9 +34,10 @@
 	- DONE! (SUBMODULE)
 
 3. Install dependencies using `npm install`.  Run tests using `npm test`.
+	- DONE!
 
 4. Make the tests pass!
-
+	- DONE!
 
 
 #### Congratulations on finishing Homework #4!
